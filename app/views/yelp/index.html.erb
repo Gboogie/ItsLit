@@ -1,0 +1,19 @@
+<div class="header"><span>It's Lit</span></div>
+<dl>
+  <% @profile.businesses.each do |value| %>
+    <dd><br>
+    <div class = "entry">
+    <h1><a href ="#"><%= value.name.to_s %></a></h1><br>
+    <img src="<%=value.image_url%>"><br>
+    <br>
+    <%= value.location.display_address.to_s %><br>
+    <%= value.location.cross_streets.to_s %><br>
+    <%= value.location.neighborhoods.to_s %><br>
+    <%= value.display_phone %><br>
+		</div>
+    <hr>
+  <% end %>
+</dl>
+
+
+
